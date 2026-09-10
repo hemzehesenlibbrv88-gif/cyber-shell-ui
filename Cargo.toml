@@ -1,0 +1,22 @@
+[package]
+name = "cyber-shell-ui"
+version = "0.1.0"
+edition = "2021"
+authors = ["hemzehesenlibbrv88-gif"]
+description = "A modern Linux-like terminal emulator UI with lock screen"
+
+[dependencies]
+ratatui = "0.24"
+crossterm = "0.27"
+tokio = { version = "1.0", features = ["full"] }
+chrono = "0.4"
+anyhow = "1.0"
+
+[[bin]]
+name = "cyber-shell-ui"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
